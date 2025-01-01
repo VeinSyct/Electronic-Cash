@@ -8,7 +8,7 @@ This is an electronic cash platform that allows the transfer of money between mo
 
 How to use the ECash functions (iframe)
 
-
+```
 let iframe = document.createElement("iframe");
 
 iframe.src = "https://ecash-icons.web.app";
@@ -19,6 +19,7 @@ iframe.onload = function() {
     // ecash is ready
 
 };
+```
 
 
 How to send message request to the ecash (iframe)
@@ -27,59 +28,59 @@ How to send message request to the ecash (iframe)
 
    ![image](https://github.com/user-attachments/assets/55c266eb-55e7-4ffc-b189-08b50857437d)
 
-
+```
 function readBalance() {
 
     iframe.contentWindow.postMessage({ action: "ecash-api-read-balance" }, iframe.src);
 
 };
-
+```
 
 
 2. Read Account - display your ecash account number
 
    ![image](https://github.com/user-attachments/assets/944603f8-5770-4ca2-81b1-3cf4201a0ce0)
 
-
-
+```
 function readAccount() {
 
     iframe.contentWindow.postMessage({ action: "ecash-api-read-account" }, iframe.src);
 
 };
-
+```
 
 
 3. Show your accout QR code - for the benefactors to scan for transfering ecash to your account
 
    ![image](https://github.com/user-attachments/assets/df15927a-9381-47e0-9846-b14b7ba33d17)
 
+```
 window.hashAccount = function(d) {
 
     iframe.contentWindow.postMessage({ action: "ecash-api-hash-account" }, iframe.src);
 
 };
-
+```
 
 
 4. Scan QR code - scan either account or ecash QR codes
 
    ![image](https://github.com/user-attachments/assets/8d2e3b43-f7c0-4a8b-8bf9-d53da7391f0b)
 
-
+```
 window.scanQRCode = function(d) {
 
     iframe.contentWindow.postMessage({ action: "ecash-api-hash-assemble", qrScan: _uz.z.qrScan }, iframe.src);
 
 };
-
+```
 
 
 5. Transfer ecash - first scan the beneficiary QR code and then set the amount, if the amount is valid the ecash QR code will display in rapid successing for fast transfer
 
    ![image](https://github.com/user-attachments/assets/fbbf2e83-5edf-45dd-9611-5b4cc3ac4e5f)
 
-
+```
 iframe.contentWindow.postMessage({
 
         action: "ecash-api-transfer-amount",
@@ -220,6 +221,7 @@ function apiResponses(data) {
     };
 
 };
+```
 
 To test the ecash live open the demo url https://ecash-demo.web.app
 
