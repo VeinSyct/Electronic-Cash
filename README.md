@@ -5,7 +5,9 @@ This is an electronic cash platform that allows the transfer of money between mo
 ![image](https://github.com/user-attachments/assets/ae11aadc-c563-4eed-86a8-81af27a0f661)
 
 
+
 How to use the ECash functions (iframe)
+
 
 let iframe = document.createElement("iframe");
 
@@ -25,21 +27,28 @@ How to send message request to the ecash (iframe)
 
    ![image](https://github.com/user-attachments/assets/55c266eb-55e7-4ffc-b189-08b50857437d)
 
+
 function readBalance() {
 
     iframe.contentWindow.postMessage({ action: "ecash-api-read-balance" }, iframe.src);
 
 };
 
+
+
 2. Read Account - display your ecash account number
 
    ![image](https://github.com/user-attachments/assets/944603f8-5770-4ca2-81b1-3cf4201a0ce0)
+
+
 
 function readAccount() {
 
     iframe.contentWindow.postMessage({ action: "ecash-api-read-account" }, iframe.src);
 
 };
+
+
 
 3. Show your accout QR code - for the benefactors to scan for transfering ecash to your account
 
@@ -51,9 +60,12 @@ window.hashAccount = function(d) {
 
 };
 
+
+
 4. Scan QR code - scan either account or ecash QR codes
 
    ![image](https://github.com/user-attachments/assets/8d2e3b43-f7c0-4a8b-8bf9-d53da7391f0b)
+
 
 window.scanQRCode = function(d) {
 
@@ -61,9 +73,12 @@ window.scanQRCode = function(d) {
 
 };
 
+
+
 5. Transfer ecash - first scan the beneficiary QR code and then set the amount, if the amount is valid the ecash QR code will display in rapid successing for fast transfer
 
    ![image](https://github.com/user-attachments/assets/fbbf2e83-5edf-45dd-9611-5b4cc3ac4e5f)
+
 
 iframe.contentWindow.postMessage({
 
@@ -81,6 +96,7 @@ iframe.contentWindow.postMessage({
 
 
 How to receive message from the ecash (iframe) - after the ecash (iframe) processing the request it will return the result back to your app, you can receive the result by adding a event listerner as shown below: 
+
 
 window.addEventListener("message", () => {
 
