@@ -8,7 +8,7 @@ This is an electronic cash platform that allows the transfer of money between mo
 
 How to use the ECash functions (iframe)
 
-```
+```ruby
 let iframe = document.createElement("iframe");
 
 iframe.src = "https://ecash-icons.web.app";
