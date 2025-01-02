@@ -37,8 +37,10 @@ function apiResponses(data) {
         document.querySelector(".ex-balance").innerHTML = data.balance;
     };
     if (data.action && data.action.match(/(read-account)/)) {
-        for (let i = 0, j = ["name", "number", "protocol"]; i < j.length; i++) 
-            document.querySelector(".account-" + j[i]).innerHTML = data.account[j[i]] ? data.account[j[i]] : "***";
+        document.querySelector(".account-name").value = data.account.name ? data.account.name : "N/A";
+        document.querySelector(".beneficiary-currency").value = data.account.currency;
+        for (let i = 0, j = ["number", "protocol"]; i < j.length; i++) 
+            document.querySelector(".account-" + j[i]).innerHTML = data.account[j[i]];
     };
     if (data.action && data.action.match(/(hash-account)/)) {
         createQr({
@@ -78,7 +80,11 @@ function apiResponses(data) {
         createQr({ s: data.hash });
     };
     if (data.action && data.action.match(/(dialog-message)/)) {
-        if (data.message == "m001") alert("There is no benificiary");
+        if (data.message == "m000") alert("Please select a benificiary");
+        if (data.message == "m001") alert("Please enter a numeric amount");
+        if (data.message == "m002") alert("Insuficient balance!");        
+        if (data.message == "m003") alert("Your balance is not sufficient, try a lesser amount");        
+        if (data.message == "m004") alert("Please enter a correct currency");
     };
 };
 
