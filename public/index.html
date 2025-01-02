@@ -86,7 +86,7 @@
                     <span class="beneficiary-number"></span>
                 </p>
                 <input class="beneficiary-currency" type="text" onkeyup="if (event.keyCode === 13) changeCurrency({ currency: this.value })"/>
-                <button onclick="changeCurrency({ name: document.querySelector('.beneficiary-currency').value })">Change</button>
+                <button onclick="changeCurrency({ currency: document.querySelector('.beneficiary-currency').value })">Change</button>
                 <input class="beneficiary-amount" type="text" value="0"/>
             </div>
             <div class="ex-button" onclick="this.style.display = 'none'; transferAmount({})">Transfer</div>    
