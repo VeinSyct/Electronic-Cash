@@ -57,7 +57,8 @@
                 <h5>ACCOUNT DETAILS</h5>
                 <p>
                     <strong>ACCOUNT NAME</strong><br/>
-                    <input class="account-name" onchange="changeName({ name: this.value })"/>
+                    <input class="account-name" onkeyup="if (event.keyCode === 13) changeName({ name: this.value })"/>
+                    <button onclick="changeName({ name: document.querySelector('.account-name').value })">Submit</button>
                 </p>
                 <p>
                     <strong>ACCOUNT NO</strong><br/>
@@ -84,10 +85,11 @@
                     <strong>ACCOUNT NO</strong><br/>
                     <span class="beneficiary-number"></span>
                 </p>
-                <input class="beneficiary-currency" type="text" onchange="changeCurrency({ currency: this.value })"/>
+                <input class="beneficiary-currency" type="text" onkeyup="if (event.keyCode === 13) changeCurrency({ currency: this.value })"/>
+                <button onclick="changeCurrency({ name: document.querySelector('.beneficiary-currency').value })">Change</button>
                 <input class="beneficiary-amount" type="text" value="0"/>
             </div>
-            <div class="ex-button" onclick="transferAmount({})">Transfer</div>    
+            <div class="ex-button" onclick="this.style.display = 'none'; transferAmount({})">Transfer</div>    
         </div>            
     </div>
 </body>
