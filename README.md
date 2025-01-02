@@ -1,11 +1,13 @@
 Electronic Cash Demo
 
-This is a demo electronic cash app that allows the transfer of ecash between mobile or desktop devices.
+This is an open source demo electronic cash app that allows the transfer of ecash between mobile or desktop devices.
 
 ![image](https://github.com/user-attachments/assets/ae11aadc-c563-4eed-86a8-81af27a0f661)
 
 
 What separates this electronic cash from cryptos and other digital payment, this app was develop for future purpose to handle massive wealth in preparation for off grid and off planet economy, the concept was cenceived from the idea of space economy as the existing digital currencies do not posses. This electronic cash is intended to solve the basic necessities of electronic economies.
+
+For web developers and designers we welcome and invite you to collaborate with us creating electronic cash front end and back end features, for better user experiences, let us know if when you need to develop the optical transfer of demo ecash, we will provide demo ecash upon request.
 
 
 
