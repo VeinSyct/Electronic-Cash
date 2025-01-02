@@ -20,7 +20,7 @@ iframe.onload = function() {
 
 How to send message request to the ecash (iframe)
 
-1. Read ECash Balance - display yout ecash balance
+1. Read ECash Balance - display your ecash balance
 
    ![image](https://github.com/user-attachments/assets/55c266eb-55e7-4ffc-b189-08b50857437d)
 
