@@ -64,7 +64,7 @@ window.hashAccount = function(d) {
 
 ```ruby
 window.scanQRCode = function(d) {
-    iframe.contentWindow.postMessage({ action: "ecash-api-hash-assemble", qrScan: _uz.z.qrScan }, iframe.src);
+    iframe.contentWindow.postMessage({ action: "ecash-api-hash-assemble", qrScan: qrScan }, iframe.src);
 };
 ```
 
@@ -119,13 +119,13 @@ function apiResponses(data) {
     
     if (data.action && data.action.match(/(hash-fragment)/)) {
         for (let i = 0; i < data.hash.length; i++) drawQr({ id: ".qr-cont", piece: data.hash[i] });
-        _uz.z.cvs = { e: [], i: 0 };
+        let cvs = { e: [], i: 0 };
         for (let i = 0, j = document.querySelector(".qr-cont").getElementsByTagName("canvas"); i < j.length; i++) {
             j[i].style.display = "none";
             j[i].style[window.innerWidth < window.innerHeight ? "width" : "height"] = "75%";
-            _uz.z.cvs.e.push(j[i]);
+            cvs.e.push(j[i]);
         };
-        if (_uz.z.cvs.e.length > 1) autoSlide({ t: _uz.qr.delay });
+        if (cvs.e.length > 1) autoSlide({ t: delay });
         document.getElementById("show-qr-cont").style.display = "block";
     };
     
@@ -135,7 +135,7 @@ function apiResponses(data) {
             if (d.r && d.ah) {
                 document.querySelector(".beneficiary-name").innerHTML = d.ah.name;
                 document.querySelector(".beneficiary-number").innerHTML = d.ah.number;
-                document.querySelector(".beneficiary-currency").innerHTML = _uz.local.account.currency;
+                document.querySelector(".beneficiary-currency").innerHTML = d.ah.currency;
             };
             
             if (d.l) {
@@ -144,8 +144,6 @@ function apiResponses(data) {
                     readBalance();
                 } else alert(`Electronic Cash is Spent`);
             }
-            delete _uz.z.qrScan.hashes;
-            delete _uz.z.qrScan.arr;
         } else alert(`Wrong QR`);
     };
     
