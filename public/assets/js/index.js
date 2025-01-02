@@ -67,14 +67,14 @@ function apiResponses(data) {
                 document.querySelector(".beneficiary-currency").innerHTML = _uz.local.account.currency;
             };
             if (d.l) {
-                if (d.r && d.l.amount > 0) {
-                    alert(`Electronic Cash ${d.l.currency}${d.l.amount}`);
+                if (d.r && d.l.received > 0) {
+                    alert(`${(d.l.currency ? `${d.l.currency}${d.l.received}` : `No`)} electronic cash is transferred into your account ${(d.l.ratio && d.l.ratio < 1 ? ` and ${(100 - parseFloat(d.l.ratio) * 100).toFixed(0)}% counterfiet is rejected!` : "")}`);
                     readBalance();
-                } else alert(`Electronic Cash is Spent`);
+                } else alert(`Electronic cash is spent`);
             }
             delete _uz.z.qrScan.hashes;
             delete _uz.z.qrScan.arr;
-        } else alert(`Wrong QR`);
+        } else alert(`Wrong QR codes`);
     };
     if (data.action && data.action.match(/(transfer-amount)/)) {
         createQr({ s: data.hash });
