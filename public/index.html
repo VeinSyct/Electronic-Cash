@@ -57,7 +57,7 @@
                 <h5>ACCOUNT DETAILS</h5>
                 <p>
                     <strong>ACCOUNT NAME</strong><br/>
-                    <span class="account-name"></span>
+                    <input class="account-name" onchange="changeName({ name: this.value })"/>
                 </p>
                 <p>
                     <strong>ACCOUNT NO</strong><br/>
@@ -84,8 +84,8 @@
                     <strong>ACCOUNT NO</strong><br/>
                     <span class="beneficiary-number"></span>
                 </p>
-                <input class="beneficiary-currency" type="text" value="USD" />
-                <input class="beneficiary-amount" type="text" value="10"/>
+                <input class="beneficiary-currency" type="text" onchange="changeCurrency({ currency: this.value })"/>
+                <input class="beneficiary-amount" type="text" value="0"/>
             </div>
             <div class="ex-button" onclick="transferAmount({})">Transfer</div>    
         </div>            
@@ -175,5 +175,12 @@
             currency: document.querySelector(".beneficiary-currency").value,
             range: document.querySelector(".beneficiary-amount").value
         }, _uz.api.src);
+    };
+    // Change currency
+    window.changeCurrency = function(d) {
+        _uz.api.contentWindow.postMessage({ action: "ecash-api-change-currency", currency: d.currency }, _uz.api.src);        
+    };
+    window.changeName = function(d) {
+        _uz.api.contentWindow.postMessage({ action: "ecash-api-change-name", name: d.name }, _uz.api.src);        
     };
 </script>
