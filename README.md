@@ -164,7 +164,7 @@ You can get dummy electronic cash from https://ecash-dummy.web.app
 
 ![Screenshot 2025-01-03 125509](https://github.com/user-attachments/assets/a04452aa-ef13-46c3-a31e-6a2faf844987)
 
-No need to login just click login button
+No need to enter username or password just click the button "Log in".
 
 ![Screenshot 2025-01-03 125524](https://github.com/user-attachments/assets/9641fb41-298b-4158-93b0-4139440470ec)
 
