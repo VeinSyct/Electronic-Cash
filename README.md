@@ -158,6 +158,34 @@ function apiResponses(data) {
 };
 ```
 
-To test the ecash live open the demo url https://ecash-demo.web.app
+For development use the dummy electronic cash to test transfer from one device to another while developing your ecash front and back end.
+
+You can get dummy electronic cash from https://ecash-dummy.web.app
+
+![Screenshot 2025-01-03 125509](https://github.com/user-attachments/assets/a04452aa-ef13-46c3-a31e-6a2faf844987)
+
+No need to login just click login button
+
+![Screenshot 2025-01-03 125524](https://github.com/user-attachments/assets/9641fb41-298b-4158-93b0-4139440470ec)
+
+Click the button "Scan QR" - open your app or try https://ecash-demo.web.app or https://qpod-demo.web.app transferring dummy ecash into your account.
+
+For https://ecash-demo.web.app find button "Show QR".
+
+For https://qpod-demo.web.app scroll down and click button "Claim".
+
+![Screenshot 2025-01-03 125606](https://github.com/user-attachments/assets/335b378d-33de-49fe-b45c-720feefa182c)
+
+Scan your app or https://ecash-demo.web.app or https://qpod-demo.web.app account QR codes.
+
+![Screenshot 2025-01-03 125637](https://github.com/user-attachments/assets/039f81d2-cc60-4f47-b751-efb9324878f6)
+
+Scan until a dialog appears, when it appears click the button "Release".
+
+![Screenshot 2025-01-03 125702](https://github.com/user-attachments/assets/70f08730-ce3c-4308-b348-377f8e2276ec)
+
+Scan the dummy ecash QR codes until a dialog appears "You have receive a dummy ecash amount DMY 1,..0.00
+
+We look forward to see your ecahs apps.
 
 Enjoy!
