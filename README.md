@@ -170,22 +170,41 @@ No need to enter username or password just click the button "Log in".
 
 Click the button "Scan QR" - open your app or try https://ecash-demo.web.app or https://qpod-demo.web.app transferring dummy ecash into your account.
 
-For https://ecash-demo.web.app find button "Show QR".
+For https://ecash-demo.web.app find the button "Show QR" and click.
 
-For https://qpod-demo.web.app scroll down and click button "Claim".
+For https://qpod-demo.web.app scroll down and find the button "Claim" and click.
 
 ![Screenshot 2025-01-03 125606](https://github.com/user-attachments/assets/335b378d-33de-49fe-b45c-720feefa182c)
 
-Scan your app or https://ecash-demo.web.app or https://qpod-demo.web.app account QR codes.
+Scan your app or https://ecash-demo.web.app or https://qpod-demo.web.app account QR codes until the dialog below appears.
 
 ![Screenshot 2025-01-03 125637](https://github.com/user-attachments/assets/039f81d2-cc60-4f47-b751-efb9324878f6)
 
-Scan until a dialog appears, when it appears click the button "Release".
+When the dialog above appears click the button "Release" to release the dummy electronic cash QR codes.
 
 ![Screenshot 2025-01-03 125702](https://github.com/user-attachments/assets/70f08730-ce3c-4308-b348-377f8e2276ec)
 
-Scan the dummy ecash QR codes until a dialog appears "You have receive a dummy ecash amount DMY 1,..0.00
+Scan the dummy ecash QR codes until a dialog appears "You have received a dummy ecash amount DMY 1,..0.00
 
-We look forward to see your ecahs apps.
+During your app development make sure you set the offline flase;
+
+```ruby
+{ offline: !1 } or { offline: false } 
+```
+
+To disable your caching.
+
+or comment out the cache service lines;
+
+```ruby
+if (navigator.onLine && _uz.offline && "serviceWorker" in navigator) {
+    navigator.serviceWorker
+        .register("index.js")
+        .then((registration) => {})
+        .catch((err) => {});
+};
+```
+
+We look forward to see your ecahs apps and get it become a a working electronic cash platform.
 
 Enjoy!
