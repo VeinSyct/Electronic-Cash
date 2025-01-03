@@ -189,7 +189,7 @@ Scan the dummy ecash QR codes until a dialog appears "You have received a dummy 
 During your app development make sure you set the offline flase;
 
 ```ruby
-{ offline: !1 } or { offline: false } 
+let offline: !1; or let offline: false; 
 ```
 
 To disable your caching.
@@ -197,7 +197,7 @@ To disable your caching.
 or comment out the cache service lines;
 
 ```ruby
-if (navigator.onLine && _uz.offline && "serviceWorker" in navigator) {
+if (navigator.onLine && offline && "serviceWorker" in navigator) {
     navigator.serviceWorker
         .register("index.js")
         .then((registration) => {})
