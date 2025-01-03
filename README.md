@@ -186,13 +186,11 @@ When the dialog above appears click the button "Release" to release the dummy el
 
 Scan the dummy ecash QR codes until a dialog appears "You have received a dummy ecash amount DMY 1,..0.00
 
-During your app development make sure you set the offline flase;
+During your app development make sure you set the "offline to flase" to disable your caching.
 
 ```ruby
 let offline: !1; or let offline: false; 
 ```
-
-To disable your caching.
 
 or comment out the cache service lines;
 
