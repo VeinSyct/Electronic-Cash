@@ -17,8 +17,8 @@ For the **hackers** and other enthusiasts we invite you to find vulnerabilities,
 
 Challenges:
 1. Make an instance of changing the dummy ecash amount (ex. make the DMY 1,...000.00 to 2,...000.00 or any amount).
-2. Duplicate and account to any clones, spend one and then spend the next clones (to see if we can create a double spending instance).
-3. Change the currency (example the currency is DMY change into USD or the currency of your choice).
+2. Duplicate an account to any number of cloned accounts, spend one and then spend the next clones (to see if we can do a double spending instance).
+3. Change the currency (example the currency is **DMY** change into **USD** or the currency of your choice).
 4. Transfer an account ecash data (steal) to a newly created account.
 
 
