@@ -1,6 +1,6 @@
 Electronic Cash Demo
 
-This is an open source demo electronic cash app that allows the transfer of ecash between mobile or desktop devices.
+This is an **open source** demo electronic cash app that allows the transfer of ecash between mobile or desktop devices, in this repository includes the electronic cash **storage** (see sample: https://ecash-demo.web.app) and **supply** (see sample: https://ecash-dummy.web.app) to develop and test your electronic cash storage app.
 
 ![image](https://github.com/user-attachments/assets/ae11aadc-c563-4eed-86a8-81af27a0f661)
 
