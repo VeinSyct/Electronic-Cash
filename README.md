@@ -5,9 +5,21 @@ This is an **open source** demo electronic cash app that allows the transfer of 
 ![image](https://github.com/user-attachments/assets/ae11aadc-c563-4eed-86a8-81af27a0f661)
 
 
-What separates this electronic cash from cryptos and other digital payment, this app was develop for future purpose to handle massive wealth in preparation for off grid and off planet economy, the concept was cenceived from the idea of space economy as the existing digital currencies do not posses. This electronic cash is intended to solve the basic necessities of electronic economies.
+What separates this electronic cash from cryptos and other digital payment, this app was develop for future purpose to handle massive wealth in preparation for off grid and off planet economies, the concept was cenceived from the idea of space economy as the existing digital currencies do not posses. This electronic cash is intended to solve the basic necessities of electronic economies.
 
-For web developers and designers we welcome and invite you to collaborate with us creating electronic cash front end and back end features, for better user experiences, let us know if when you need to develop the optical transfer of demo ecash, we will provide demo ecash upon request.
+For **web developers** and designers we welcome and invite you to collaborate with us creating electronic cash front end and back end features, for better user experiences, let us know if when you need to develop the optical transfer of demo ecash, we will provide demo ecash upon request.
+
+1. Create your frond end (using Figma, Wordpress, Laravel or just plane HTML coding).
+2. Interface the electronic cash using the example in the public folder.
+
+
+For the **hackers** and other enthusiasts we invite your to find vulnerabilities in this system to further improve and strengthen the electronic app securities, please do share your found vulnerabilities loop holes and bugs, we would specifically ask you to tampered the electronic cash in demonstration by video or other means:
+
+Challenges:
+1. Make an instance of changing the dummy ecash amount (ex. make the DMY 1,...000.00 to 2,...000.00 or any amount).
+2. Duplicate and account to any clones, spend one and then spend the next clones (to see if we can create a double spending instance).
+3. Change the currency (example the currency is DMY change into USD or the currency of your choice).
+4. Transfer an account ecash data (steal) to a newly created account.
 
 
 
