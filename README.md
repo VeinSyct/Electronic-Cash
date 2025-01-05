@@ -13,7 +13,7 @@ For **web developers** and designers we welcome and invite you to collaborate wi
 2. Interface the electronic cash using the example in the public folder.
 
 
-For the **hackers** and other enthusiasts we invite your to find vulnerabilities in this system to further improve and strengthen the electronic app securities, please do share your found vulnerabilities loop holes and bugs, we would specifically ask you to tampered the electronic cash in demonstration by video or other means:
+For the **hackers** and other enthusiasts we invite you to find vulnerabilities, loop holes or bugs in this system to further improve and enhance the electronic cash data securities, please do share your found vulnerabilities loop holes and bugs, we would specifically ask you to tampered the electronic cash in demonstration by video or other means:
 
 Challenges:
 1. Make an instance of changing the dummy ecash amount (ex. make the DMY 1,...000.00 to 2,...000.00 or any amount).
