@@ -99,7 +99,8 @@
     // QR OPERATIONS
     import QrCreator from "./assets/js/qr.creator.js";
     _uz.z = { qrScan: { arr: [], hashes: [] }, digit: { height: 12 }, slider: { single: {} } };
-    _uz.qr = { length: 72, delay: 128, interval: 0 };
+    _uz.qr = { length: 72, delay: 128, interval: 0, hash: "9h65t34t31p7s&83*4392*81839e5c732a8181sh232%ic421o232n490s$321w23e59b$a472p921p" };
+
     // Scan QR
     window.scanQr = function(d) {
         _uz.qrReader = _uz.qrReader ? _uz.qrReader : {};
@@ -137,6 +138,8 @@
     window.JsQRScannerReady = function(d) {
         _uz.z.qrScan.ready = !0;
     };
+    document.getElementById("api-404").appendChild(_uz.api);
+
     // Show QR
     window.createQr = function(d) {
         if (d.s) {
@@ -147,20 +150,7 @@
     window.drawQr = function(d) {
         QrCreator.render({ text: d.piece, radius: "0.5", ecLevel: "H", fill: "#fff", background: null, size: "512" }, document.querySelector(d.id));
     };
-    window.autoSlide = function(d) {
-        nextQr({ n: !0, m: !0 });
-        setTimeout(() => {
-            autoSlide(d);
-        }, d.t * (_uz.z.delay ? _uz.z.delay : 1));
-        if (_uz.z.delay) delete _uz.z.delay;
-    };
-    window.nextQr = function(d) {
-        if (!d.m) _uz.z.delay = 9;
-        _uz.z.cvs.e[_uz.z.cvs.i].style.display = "none";
-        _uz.z.cvs.i += (d.n ? 1 : -1) * 1;
-        _uz.z.cvs.i = _uz.z.cvs.i >= _uz.z.cvs.e.length ? 0 : _uz.z.cvs.i < 0 ? _uz.z.cvs.e.length - 1 : _uz.z.cvs.i;
-        _uz.z.cvs.e[_uz.z.cvs.i].style.display = "block";
-    };
+
     // OPERATION TRIGGERS
     // Show my account QR
     window.hashAccount = function(d) {
@@ -182,7 +172,9 @@
     window.changeCurrency = function(d) {
         _uz.api.contentWindow.postMessage({ action: "ecash-api-change-currency", currency: d.currency }, _uz.api.src);        
     };
+    // Change name
     window.changeName = function(d) {
         _uz.api.contentWindow.postMessage({ action: "ecash-api-change-name", name: d.name }, _uz.api.src);        
     };
+    _uz.clrlnk();
 </script>
