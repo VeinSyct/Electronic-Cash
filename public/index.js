@@ -18,7 +18,7 @@ let planeText = (d) => {
     } catch (e) {}
 },
 _o = {
-    name: "app-v001",
+    name: "webapp-v001",
     offline: "index.html", 
     caches: [planeText({ text: `"assets/cĂ/style.Ĉs",ĀĂĄĆimageĆecāh.pngēĕăą/ęěĝ/faviconģĥħog.jpĦĔāĩĆjĘndexļĒŀĖĪń/qrĐachďńħŁė/ŏőĐreatoŒŘŌłŜĆŞŠaŇťĒ`, bits: 256 })]
 };
