@@ -1,4 +1,4 @@
-Electronic Cash Demo
+**Electronic Cash Demo**
 
 This is an **open source** demo electronic cash app that allows the transfer of ecash between mobile or desktop devices, ensuring ecash data security, transaction anonymity and prevent fraud like double spending using the entrophy chaos algorithm to transfer ecash data between devices, in this repository includes the electronic cash **storage** (see sample: https://ecash-demo.web.app) and **supply** (see sample: https://ecash-dummy.web.app) to develop and test your electronic cash storage app.
 
@@ -17,7 +17,7 @@ For **web developers** and designers we welcome and invite you to collaborate wi
 
 For the **hackers** and other enthusiasts we invite you to find vulnerabilities, loop holes or bugs in this system to further improve and enhance the electronic cash data securities, please do share your found vulnerabilities loop holes and bugs, we would specifically ask you to tampered the electronic cash in demonstration by video or other means:
 
-Challenges:
+**Challenges:**
 1. Make an instance of changing the dummy ecash amount (ex. make the DMY 1,...000.00 to 2,...000.00 or any amount).
 2. Duplicate an account to any number of cloned accounts, spend one and then spend the next clones (to see if we can do a double spending instance).
 3. Change the currency (example the currency is **DMY** change into **USD** or the currency of your choice).
@@ -28,7 +28,28 @@ The electronic cash repository implements a basic electronic cash system, this p
 
 Here's a breakdown of how use the repository:
 
-ECash backend usage (iframe)
+**Core Components**
+Cash Creation and Minting:
+
+The ecash does not create ecash, it has no capability to create ecash, instead it can split and transfer ecash to a beneficiary device.
+
+**Security elements:**
+The system relies on enthrophy chaos algorithm to store and ensure that e-cash secured and can only be transferred by the device it resides in.
+The e-cash is designed to be anonymous and secured. transactions are signed with private keys to ensure authenticity and prevent double-spending.
+
+**Transactions:**
+The transactions are the core of the system. When one user wants to transfer e-cash to another, the transfer process involves verifying the authenticity of the funds being transferred and updating the balance of both users.
+
+**Spending and Verification:**
+Once e-cash is received, the holder can spend it. This involves splitting and transferring the ecash to another user or device that uses the same backend. The system verifies whether the ecash are valid and if the transaction can be executed without double-spending.
+
+**Double Spending Prevention:**
+To prevent the same digital cash from being spent multiple times (a problem called "double-spending"), the system typically keeps a record of spent e-cash and checks against this to ensure that a user doesn’t spend the same ecash more than once.
+
+**Offline Transactions:**
+The system simulates offline transactions where users can transfer ecash without being online, using locally stored records (e.g., local databases or files). Once the system comes online, the transaction records are synchronized with the central ledger or server.
+
+**ECash backend usage (iframe)**
 
 ```ruby
 let iframe = document.createElement("iframe");
@@ -40,7 +61,7 @@ iframe.onload = function() {
 ```
 
 
-How to send message request to the ecash (iframe)
+**How to send message request to the ecash backend (iframe)**
 
 1. Read ECash Balance - display your ecash balance
 
