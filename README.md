@@ -24,7 +24,7 @@ Challenges:
 4. Transfer an account ecash data (steal) to a newly created account.
 
 
-The electronic cash repository implements a basic electronic cash system, this project allows ecash transfers and storage to allow users to conduct secure and anonymous transactions without relying on a central authority.
+The electronic cash repository implements a basic electronic cash system, this project allows ecash transfers and storage for users to conduct secure and anonymous transactions without relying on a central authority or server.
 
 Here's a breakdown of how use the repository:
 
