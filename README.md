@@ -1,6 +1,6 @@
 # Electronic Cash Demo
 
-This is an **open source** demo electronic cash app that allows the transfer of ecash between mobile or desktop devices, ensuring ecash data security, transaction anonymity and prevent fraud like double spending using the entrophy chaos algorithm to transfer ecash data between devices, in this repository includes the electronic cash **storage** (see sample: https://ecash-demo.web.app) and **supply** (see sample: https://ecash-dummy.web.app) to develop and test your electronic cash storage app.
+This is a demo **open source** electronic cash app that allows the transfer of ecash between mobile or desktop devices, ensuring ecash data security, transaction anonymity and prevent fraud like double spending using the entrophy chaos algorithm to transfer ecash data between devices, in this repository includes the electronic cash **storage** (see sample: https://ecash-demo.web.app) and **supply** (see sample: https://ecash-dummy.web.app) to develop and test your electronic cash storage app.
 
 This repository is straighforward and simple and can be use as the foundation for complex e-cash systems development.
 
