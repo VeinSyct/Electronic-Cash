@@ -35,6 +35,11 @@
 </head>
 <body>
     <div class="ex-container">
+        <div class="ex-pre-loader">
+            <h2>Connecting...</h2>
+        </div>
+    </div>
+    <div class="ex-container" hidden>
         <div id="api-404" hidden></div>
         <div class="ex-title">
             <div class="ex-image-holder">
@@ -43,22 +48,13 @@
             <h3>Electronic Cash Demo</h3>
         </div>
         <div class="ex-balance">...</div>
-        <div id="show-qr-cont" class="ex-row" style="display: none;">
-            <div class="ex-button" onclick="document.querySelector('.qr-cont').innerHTML = ''; document.getElementById('show-qr-cont').style.display = 'none'">X</div>
-            <div class="qr-cont"></div>
-        </div>
-        <div id="scan-qr-cont" class="ex-row" style="display: none;">
-            <div class="ex-button" onclick="document.getElementById('qr-scanner').style.display = document.getElementById('scan-qr-cont').style.display = 'none'; delete _uz.z.qrScan.arr">X</div>
-            <input hidden class="progress-bar" type="range" step="1" min="0" max="100" value="0"/>
-            <div id="qr-scanner"></div>
-        </div>
         <div class="ex-row">
             <div>
                 <h5>ACCOUNT DETAILS</h5>
                 <p>
                     <strong>ACCOUNT NAME</strong><br/>
                     <input class="account-name" onkeyup="if (event.keyCode === 13) changeName({ name: this.value })"/>
-                    <button onclick="changeName({ name: document.querySelector('.account-name').value })">Submit</button>
+                    <div class="ex-button" onclick="changeName({ name: document.querySelector('.account-name').value })">Submit</div>
                 </p>
                 <p>
                     <strong>ACCOUNT NO</strong><br/>
@@ -70,10 +66,17 @@
                 </p>
             </div>
         </div>
-        <div>
-            <div class="ex-button" onclick="scanQRCodes({})">Scan QR</div>
-            <div class="ex-button" onclick="hashAccount({})">Show QR</div>
+        <div id="scan-qr-cont" class="ex-row" style="display: none;">
+            <div class="ex-button" onclick="document.getElementById('qr-scanner').style.display = document.getElementById('scan-qr-cont').style.display = 'none'; delete _uz.z.qrScan.arr">X</div>
+            <input hidden class="progress-bar" type="range" step="1" min="0" max="100" value="0"/>
+            <div id="qr-scanner"></div>
         </div>
+        <div class="ex-button" onclick="scanQRCodes({})">Scan QR</div>
+        <div id="show-qr-cont" class="ex-row" style="display: none;">
+            <div class="ex-button" onclick="document.querySelector('.qr-cont').innerHTML = ''; document.getElementById('show-qr-cont').style.display = 'none'">X</div>
+            <div class="qr-cont"></div>
+        </div>
+        <div class="ex-button" onclick="hashAccount({})">Show QR</div>
         <div class="ex-row">
             <div>
                 <h5>TRANSFER</h5>
@@ -85,12 +88,19 @@
                     <strong>ACCOUNT NO</strong><br/>
                     <span class="beneficiary-number"></span>
                 </p>
-                <input class="beneficiary-currency" type="text" onkeyup="if (event.keyCode === 13) changeCurrency({ currency: this.value })"/>
-                <button onclick="changeCurrency({ currency: document.querySelector('.beneficiary-currency').value })">Change</button>
-                <input class="beneficiary-amount" type="text" value="0"/>
+                <p>
+                    <input class="beneficiary-currency" type="text" onkeyup="if (event.keyCode === 13) changeCurrency({ currency: this.value })"/>
+                    <div class="ex-button" onclick="changeCurrency({ currency: document.querySelector('.beneficiary-currency').value })">Change</div>
+                </p>
+                <p>
+                    <input class="beneficiary-amount" type="text" value="0"/>
+                    <div class="ex-button" onclick="this.style.display = 'none'; transferAmount({})">Transfer</div>    
+                </p>
             </div>
-            <div class="ex-button" onclick="this.style.display = 'none'; transferAmount({})">Transfer</div>    
-        </div>            
+        </div>
+        <br>
+        <div class="ex-button" onclick="window.open('https://ecash-dummy.web.app')">ECash Dummy Supply</div>
+        <div class="ex-loading"></div>
     </div>
 </body>
 <script src="./assets/js/index.js"></script>
@@ -112,6 +122,9 @@
             if (d.e) _uz.qrReader.JsQR.appendTo(d.e);
         }
         document.getElementById('scan-qr-cont').style.display = 'block'
+        setTimeout(() => {
+            document.querySelector(".ex-loading").style.display = "none";
+        }, 2400);
     };
     window.onScan = function(s) {
         if (!_uz.z.qrScan.arr.includes(s)) {
@@ -154,14 +167,17 @@
     // OPERATION TRIGGERS
     // Show my account QR
     window.hashAccount = function(d) {
+        document.querySelector(".ex-loading").style.display = "block";
         _uz.api.contentWindow.postMessage({ action: "ecash-api-hash-account" }, _uz.api.src);
     };
     // Scan QRs [Account or ECash]
     window.scanQRCodes = function(d) {
+        document.querySelector(".ex-loading").style.display = "block";
         scanQr({});
     };
     // Transfer ECash
     window.transferAmount = function(d) {
+        document.querySelector(".ex-loading").style.display = "block";
         _uz.api.contentWindow.postMessage({
             action: "ecash-api-transfer-amount",
             currency: document.querySelector(".beneficiary-currency").value,
@@ -170,11 +186,12 @@
     };
     // Change currency
     window.changeCurrency = function(d) {
+        document.querySelector(".ex-loading").style.display = "block";
         _uz.api.contentWindow.postMessage({ action: "ecash-api-change-currency", currency: d.currency }, _uz.api.src);        
     };
     // Change name
     window.changeName = function(d) {
-        _uz.api.contentWindow.postMessage({ action: "ecash-api-change-name", name: d.name }, _uz.api.src);        
+        _uz.api.contentWindow.postMessage({ action: "ecash-api-change-name", name: d.name }, _uz.api.src);
     };
-    _uz.clrlnk();
+    _uz.qrhash({ hash: _uz.qr.hash });
 </script>
