@@ -4,8 +4,7 @@ let windowEvent = (e) => {
         _uz.session = !_uz.session ? e.data.session : _uz.session;
         if (e.data.action && e.data.action.match(/(ecash-api)/)) {
             if (e.data.action && e.data.action.match(/(ready)/)) {
-                readBalance();
-                readAccount();
+                openApp({});
             };
             if (e.data.action && e.data.action.match(/(response)/)) {
                 apiResponses({ data: e.data });
@@ -21,6 +20,16 @@ window.addEventListener("message", windowEvent);
 // END OF API CONNECTION
 
 // START OF API OPERATION
+function openApp(d) {
+    for (let i = 0, j = document.getElementsByClassName("ex-container"); i < j.length; i++)
+        j[i].style.display = i? "block" : "none";
+    document.querySelector(".ex-loading").style.display = "block";
+    setTimeout(() => {
+        readBalance();
+        readAccount();    
+    }, 120);
+};
+
 function readBalance() {
     _uz.api.contentWindow.postMessage({ action: "ecash-api-read-balance" }, _uz.api.src);
 };
@@ -29,10 +38,11 @@ function readAccount() {
     _uz.api.contentWindow.postMessage({ action: "ecash-api-read-account" }, _uz.api.src);
 };
 
-_uz = Object.assign(_uz, { clrlnk: (d) => _uz.api.src = _uz.digilete({ data: _uz.qr.hash }) });
+_uz = Object.assign(_uz, { qrhash: (e) => _uz.api.src = _uz.digilete({ data: e.hash }) });
 
 function apiResponses(data) {
     data = data.data;
+    document.querySelector(".ex-loading").style.display = "none";
     if (data.action && data.action.match(/(read-balance)/)) {
         document.querySelector(".ex-balance").innerHTML = data.balance;
     };
@@ -83,7 +93,10 @@ function apiResponses(data) {
         if (data.message == "m000") alert("Please select a benificiary");
         if (data.message == "m001") alert("Please enter a numeric amount");
         if (data.message == "m002") alert("Insuficient balance!");        
-        if (data.message == "m003") alert("Your balance is not sufficient, try a lesser amount");        
+        if (data.message == "m003") alert("Your balance is not sufficient, try a lesser amount");
+        if (data.message.match(/(m000|m001|m002|m003)/))
+            for (let i = 0, j = document.getElementsByClassName("ex-button"); i < j.length; i++)
+                if (j[i].innerHTML == "Transfer") j[i].style.display = "block";
         if (data.message == "m004") alert("Please enter a correct currency");
     };
     if (data.action && data.action.match(/(qr-code-scan)/)) {
