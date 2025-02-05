@@ -12,9 +12,7 @@ This repository is straighforward and simple and can be use as the foundation fo
 
 ![image](https://github.com/user-attachments/assets/ae11aadc-c563-4eed-86a8-81af27a0f661)
 
-<iframe src="https://www.youtube.com/embed/KuIEfNAbCL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 100%; heigth: 100%"></iframe>
-
-[Watch](https://youtube.com/shorts/KuIEfNAbCL4)
+[Watch](https://www.youtube.com/embed/KuIEfNAbCL4)
 
 What separates this electronic cash from cryptos and other digital payment, this app was developed for future purpose to handle massive wealth in preparation for off grid and off planet economies, the concept was cenceived from the idea of space economy as the existing digital currencies do not posses. This electronic cash is intended to solve the basic necessities of electronic economies.
 
