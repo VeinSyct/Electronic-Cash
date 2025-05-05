@@ -2,7 +2,7 @@
 
 The ecash is an open source electronic cash library that allows developers to create ecash platform to facilitate the locating and transfer of ecash between benefactors and beneficiaries.
 
-To go to the [electronic cash tutorials](http://ecash-tutorial.web.app) or download the [electronic cash module](https://github.com/VeinSyct/ECash-Module/tree/main/module-ecash/platform) to start making your electronic cash platform. 
+Go to the [electronic cash tutorials](http://ecash-tutorial.web.app) or download the [electronic cash module](https://github.com/VeinSyct/ECash-Module/tree/main/module-ecash/platform) to start making your electronic cash platform. 
 
 Note: This repository is not capable of creating ecash, only the ecash virtual location is stored in the device so that no one is capable of tampering the ecash data.
 
