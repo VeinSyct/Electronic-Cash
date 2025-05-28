@@ -58,7 +58,7 @@ In summary:
 
 1. The e-cash data is stored in an unfolded virtual quantum space.
 2. When virtual quantum space is folded back to a point the e-cash data is crunched to entrophy.
-3. To recover the e-cash data, a program is required to unfold quantum space and navigation link address to locate the data in plane text format.
+3. To recover the e-cash data, a program is required to unfold a virtual quantum space and a navigation link address to locate and recover the data in plane text format.
 4. The e-cash plane text format is not a digit 1 to any number or value its an intricate data structure that is measured how much it content to determine its value.
 5. The e-cash data is not incremented or decremented like digits or subtracted or summed, to subract a value from the e-cash the e-cash data contents is splitted and merged to the recepient's e-data.
 
