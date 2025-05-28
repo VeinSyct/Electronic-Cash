@@ -65,6 +65,7 @@ In summary:
 5. The e-cash data does not behave like traditional numerical values — it cannot be incremented, decremented, summed, or subtracted in the usual way. To transfer value (i.e., subtract from one and add to another), the data must be split and merged with the recipient's e-cash data structure.
 
 Conclusion
+
 Even if a hacker were to locate and copy the e-cash data within the unfolded virtual quantum space, it would be virtually impossible to reconstruct it in its original, meaningful order. No existing or foreseeable program could restore its emergent structure.
 
 Even in the hypothetical scenario where the hacker has trillions upon trillions of years of quantum computing time and somehow manages to convert the e-cash back into plaintext, they would still face an insurmountable challenge: deciphering how to correctly split or merge its content to manipulate or spend the value.
