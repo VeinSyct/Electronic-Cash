@@ -47,23 +47,27 @@ The system relies on enthrophy chaos algorithm to store and ensure that e-cash s
 The e-cash is designed to be anonymous and secured. transactions are signed with private keys to ensure authenticity and prevent double-spending.
 
 **Safety features:**
-The e-cash doesn't require encryption like crypto currencies or bank accounts, the electronic cash stores data in the device in virtual space address (see image below) unique to every users, the electronic cash data is placed in a virtual quantum address which can be found using the virtual space address to get back to where you placed the data, when you leave the virtual space the space is folded and the data is crunched to entrophy, even an exploring hacker or a PhD in quantum found the data, it is pretty much useless because you will require trillions upon trillions of years to randomly wait for the data to come back into emergence.
+The e-cash does not require traditional encryption like cryptocurrencies or bank accounts. Instead, it stores a unique virtual space address on the user's device. This address is specific to each user and functions as a pointer to the location of the electronic cash data.
+The data itself is stored within a virtual quantum address, which can only be accessed by resolving the original virtual space address. When the user exits the virtual space, the space collapses and the data is compressed into entropy.
+Even if a hacker—or a PhD expert in quantum computing—were to discover the raw data, it would be effectively useless. Recovering the original information would require waiting for trillions upon trillions of years for the exact quantum state to re-emerge by chance.
 
 ![image](https://github.com/user-attachments/assets/bbb62090-de37-452b-aef0-04595b2f9f60)
 
 Safety measures:
-The e-cash data is not stored in the device, to retrieve the e-cash data, you will need the abouve link address to locate the e-cash data in virtual space.
+The e-cash data is not stored on the device. To retrieve it, you will need the link provided above to locate the e-cash data in virtual space.
 
 In summary:
 
-1. The e-cash data is stored in an unfolded virtual quantum space.
-2. When virtual quantum space is folded back to a point the e-cash data is crunched to entrophy.
-3. To recover the e-cash data, a program is required to unfold a virtual quantum space and a navigation link address to locate and recover the data in plane text format.
-4. The e-cash plane text format is not a digit 1 to any number or value its an intricate data structure that is measured how much it content to determine its value.
-5. The e-cash data is not incremented or decremented like digits or subtracted or summed, to subract a value from the e-cash the e-cash data contents is splitted and merged to the recepient's e-data.
+1. The e-cash data is stored within an unfolded virtual quantum space — a complex, non-linear data environment.
+2. When this virtual quantum space is folded back into a singularity (a point), the e-cash data collapses into entropy, rendering it unreadable and undecodable by conventional means.
+3. To recover the e-cash data, a specialized program is required to unfold the virtual quantum space. Additionally, a precise navigation link (address) is needed to locate and reconstruct the data in its plaintext format.
+4. The plaintext format of e-cash is not represented by simple digits or numerical values. Instead, it is an intricate data structure whose value is determined by the richness and completeness of its internal content.
+5. The e-cash data does not behave like traditional numerical values — it cannot be incremented, decremented, summed, or subtracted in the usual way. To transfer value (i.e., subtract from one and add to another), the data must be split and merged with the recipient's e-cash data structure.
 
-Conclusion:
-Even if a hacker managed to located and copy the e-cash data in an unfolded virtual quantum space, there is no way any program can bring back the e-cash data back in emergence (the correct order readable), let just say the hacker managed to have a trillions of trillions of years of life cycle time using quantum computer and managed to bring the e-cash data into plane text format, he has to figure out how to split or merge the content of the e-cash data?
+Conclusion
+Even if a hacker were to locate and copy the e-cash data within the unfolded virtual quantum space, it would be virtually impossible to reconstruct it in its original, meaningful order. No existing or foreseeable program could restore its emergent structure.
+
+Even in the hypothetical scenario where the hacker has trillions upon trillions of years of quantum computing time and somehow manages to convert the e-cash back into plaintext, they would still face an insurmountable challenge: deciphering how to correctly split or merge its content to manipulate or spend the value.
 
 **Transactions:**
 The transactions are the core of the system. When one user wants to transfer e-cash to another, the transfer process involves verifying the authenticity of the funds being transferred and updating the balance of both users.
