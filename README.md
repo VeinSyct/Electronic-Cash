@@ -46,6 +46,22 @@ The ecash does not create ecash, it has no capability to create ecash, instead i
 The system relies on enthrophy chaos algorithm to store and ensure that e-cash secured and can only be transferred by the device it resides in.
 The e-cash is designed to be anonymous and secured. transactions are signed with private keys to ensure authenticity and prevent double-spending.
 
+**Safety features:**
+The e-cash doesn't require encryption like crypto currencies or bank accounts, the electronic cash stores data in the device in virtual space address (see image below) unique to every users, the electronic cash data is placed in a virtual quantum address which can be found using the virtual space address to get back to where you placed the data, when the you leave the virtual space the space is folded and the data is crunched to entrophy, even an exploring hacker or a PhD in quantum found the data, it is pretty much useless because you will require trillions upon trillions of years to randomly wait for the data to come back into emergence. 
+
+![image](https://github.com/user-attachments/assets/bbb62090-de37-452b-aef0-04595b2f9f60)
+
+In summary:
+
+1. The e-cash data is stored in an unfolded virtual quantum space.
+2. When virtual quantum space is folded back to a point the e-cash data is crunched to entrophy.
+3. To recover the e-cash data, a program is required to unfold quantum space and navigation link address to locate the data in plane text format.
+4. The e-cash plane text format is not a digit 1 to any number or value its an intricate data structure that is measured how much it content to determine its value.
+5. The e-cash data is not incremented or decremented like digits or subtracted or summed, to subract a value from the e-cash the e-cash data contents is splitted and merged to the recepient's e-data.
+
+Conclusion:
+Even if a hacker managed to located and copy the e-cash data in an unfolded virtual quantum space, there is no way any program can bring back the e-cash data back in emergence (the correct order readable), let just say the hacker managed to have a trillions of trillions of years of life cycle time using quantum computer and managed to bring the e-cash data into plane text format, he has to figure out how to split or merge the content of the e-cash data?
+
 **Transactions:**
 The transactions are the core of the system. When one user wants to transfer e-cash to another, the transfer process involves verifying the authenticity of the funds being transferred and updating the balance of both users.
 
