@@ -47,7 +47,7 @@ The system relies on enthrophy chaos algorithm to store and ensure that e-cash s
 The e-cash is designed to be anonymous and secured. transactions are signed with private keys to ensure authenticity and prevent double-spending.
 
 **Safety features:**
-The e-cash doesn't require encryption like crypto currencies or bank accounts, the electronic cash stores data in the device in virtual space address (see image below) unique to every users, the electronic cash data is placed in a virtual quantum address which can be found using the virtual space address to get back to where you placed the data, when the you leave the virtual space the space is folded and the data is crunched to entrophy, even an exploring hacker or a PhD in quantum found the data, it is pretty much useless because you will require trillions upon trillions of years to randomly wait for the data to come back into emergence.
+The e-cash doesn't require encryption like crypto currencies or bank accounts, the electronic cash stores data in the device in virtual space address (see image below) unique to every users, the electronic cash data is placed in a virtual quantum address which can be found using the virtual space address to get back to where you placed the data, when you leave the virtual space the space is folded and the data is crunched to entrophy, even an exploring hacker or a PhD in quantum found the data, it is pretty much useless because you will require trillions upon trillions of years to randomly wait for the data to come back into emergence.
 
 ![image](https://github.com/user-attachments/assets/bbb62090-de37-452b-aef0-04595b2f9f60)
 
