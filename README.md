@@ -1,6 +1,17 @@
 # Electronic Cash Demo
 
-**Ecash** is an open-source electronic cash library that allows developers to create an ecash platform for facilitating the secure location and transfer of ecash between benefactors and beneficiaries.  
+**Ecash** is an open-source electronic cash library that allows developers to create an ecash platform for facilitating the secure location and transfer of ecash between benefactors and beneficiaries.
+
+Go to the [Electronic Cash Tutorials](http://ecash-tutorial.web.app) or download the [Ecash Module](https://github.com/VeinSyct/ECash-Module/tree/main/module-ecash/platform) to start building your own ecash platform.  
+
+> **Note:**  
+> This repository is not capable of creating ecash. It only stores the *virtual location* of ecash on the device, ensuring security and preventing tampering with ecash data.
+
+![163618338-pagamento-con-codice-qr-shopping-online-portafoglio-e-concetto-di-tecnologia-senza-contanti-mano](https://github.com/user-attachments/assets/a61d67b6-cbe2-4195-aa54-01bd9e001097)
+
+This is a demo **open-source** electronic cash application that enables the transfer of ecash between mobile and desktop devices. It ensures **data security**, **transaction anonymity**, and prevents fraud such as **double spending** through the use of an *entropy chaos algorithm* for transferring ecash data between devices.
+
+---
 
 ## Electronic Cash Development History
 
@@ -181,16 +192,9 @@ With the rise of web applications and Python's popularity as an engineering-frie
 
 ---
 
-Go to the [Electronic Cash Tutorials](http://ecash-tutorial.web.app) or download the [Ecash Module](https://github.com/VeinSyct/ECash-Module/tree/main/module-ecash/platform) to start building your own ecash platform.  
+## About This Repository
 
-> **Note:**  
-> This repository is not capable of creating ecash. It only stores the *virtual location* of ecash on the device, ensuring security and preventing tampering with ecash data.
-
-![163618338-pagamento-con-codice-qr-shopping-online-portafoglio-e-concetto-di-tecnologia-senza-contanti-mano](https://github.com/user-attachments/assets/a61d67b6-cbe2-4195-aa54-01bd9e001097)
-
-This is a demo **open-source** electronic cash application that enables the transfer of ecash between mobile and desktop devices. It ensures **data security**, **transaction anonymity**, and prevents fraud such as **double spending** through the use of an *entropy chaos algorithm* for transferring ecash data between devices.  
-
-This repository includes both the electronic cash **storage** ([sample](https://ecash-demo.web.app)) and **supply** ([sample](https://ecash-dummy.web.app)) modules, allowing developers to build and test their own electronic cash storage applications.  
+This repository includes both the electronic cash **storage** ([https://ecash-demo.web.app](https://ecash-demo.web.app)) and **supply** ([https://ecash-dummy.web.app](https://ecash-dummy.web.app)) modules, allowing developers to build and test their own electronic cash storage applications.  
 
 The implementation is straightforward and simple, making it an excellent foundation for developing more advanced and complex e-cash systems.  
 
