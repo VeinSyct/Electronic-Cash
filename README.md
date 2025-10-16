@@ -2,6 +2,25 @@
 
 **Ecash** is an open-source electronic cash library that allows developers to create an ecash platform for facilitating the secure location and transfer of ecash between benefactors and beneficiaries.  
 
+## Electronic Cash Development History
+
+The E-Cash is a descendant of several earlier electronic cash versions, originating from the PICF84MT13 prototype developed in 2003 at AMA Computer College, Cagayan de Oro. This version used the microcontroller PIC16F84, powered by a lithium battery to retain RAM data memory. Its source code was written entirely in Assembly language.
+
+![Uploading picinf84mt13.webp…]()
+
+![Uploading f84mt1314case.webp…]()
+
+C Version (2004):
+In 2004, the microcontroller assembly code was migrated to the Turbo C programming language for desktop computers (MS-DOS), as requested by the Land Bank of the Philippines. The transition was made for convenience, being more practical and easier to use than the handheld prototype microcontroller version, which was too bulky and impractical for real use.
+
+Basic Version (2013):
+The system was later translated into Visual Basic and integrated with MySQL for data storage. However, with Microsoft discontinuing support for Visual Basic in 2013, this version quickly became obsolete.
+
+Python & JavaScript Version (2016):
+With the rise of web applications and Python's popularity as an engineering-friendly language, the Turbo C source code was migrated to Python in 2016 for a proposal to Emirates NBD in Dubai, United Arab Emirates. However, Python proved unsuitable for hardware-level programming and failed to meet E-Cash requirements. Since Python code was often decompiled into either WebAssembly or JavaScript, the Python version was scrapped. The project was then fully rewritten in WebAssembly and JavaScript, ensuring greater efficiency and practicality.
+
+---
+
 Go to the [Electronic Cash Tutorials](http://ecash-tutorial.web.app) or download the [Ecash Module](https://github.com/VeinSyct/ECash-Module/tree/main/module-ecash/platform) to start building your own ecash platform.  
 
 > **Note:**  
