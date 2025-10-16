@@ -192,15 +192,6 @@ With the rise of web applications and Python's popularity as an engineering-frie
 
 ---
 
-## About This Repository
-
-This repository includes both the electronic cash **storage** ([https://ecash-demo.web.app](https://ecash-demo.web.app)) and **supply** ([https://ecash-dummy.web.app](https://ecash-dummy.web.app)) modules, allowing developers to build and test their own electronic cash storage applications.  
-
-The implementation is straightforward and simple, making it an excellent foundation for developing more advanced and complex e-cash systems.  
-
-![image](https://github.com/user-attachments/assets/ae11aadc-c563-4eed-86a8-81af27a0f661)
-
----
 
 ### What Makes This Different?  
 
@@ -234,6 +225,13 @@ Try to reproduce these scenarios in a controlled test environment. When you find
 ---
 
 ### About this repository
+
+This repository includes both the electronic cash **storage** ([https://ecash-demo.web.app](https://ecash-demo.web.app)) and **supply** ([https://ecash-dummy.web.app](https://ecash-dummy.web.app)) modules, allowing developers to build and test their own electronic cash storage applications.  
+
+The implementation is straightforward and simple, making it an excellent foundation for developing more advanced and complex e-cash systems.  
+
+![image](https://github.com/user-attachments/assets/ae11aadc-c563-4eed-86a8-81af27a0f661)
+
 
 This repository implements a basic electronic cash system that supports ecash transfers and local storage so users can perform secure, anonymous transactions without relying on a central authority or single server. Use this project as a foundation for building more advanced e-cash systems — and help us improve it by contributing UI/UX features, integrations, tests, and security research.
 
