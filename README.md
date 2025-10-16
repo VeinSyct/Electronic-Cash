@@ -11,6 +11,165 @@ The **E-Cash** system is a descendant of several early electronic cash prototype
 ![f84mt1314case](https://github.com/user-attachments/assets/49b8854e-a978-4112-baf9-d5ad4c887353)
 
 
+### PIC16F84 UART Source Code:
+
+```ruby
+W_Temp equ 0ch
+	SaveB0 equ 14h
+	SaveB1 equ 15h
+	SaveB2 equ 16h
+	SaveB3 equ 17h
+	SendB0 equ 18h
+	SendB1 equ 19h
+	SendB2 equ 1Ah
+	SendB3 equ 1Bh
+	OpFlag equ 1Ch
+	btfss status,not_pd
+	retfie
+	goto 0x07d
+	sleep
+	movwf 0x0c
+	movf status,w
+	movwf 0x0d
+	movf 0x0e,w
+	movwf status
+	btfsc intcon,t0if
+	goto 0x011
+	bcf intcon,inte
+	bsf intcon,t0ie
+	bsf status,rp0
+	bcf 0x01,5
+	movlw 0x2a
+	movwf 0x0f
+	bcf status,rp0
+	movlw 0xdf
+	movwf 0x01
+	clrf pclath
+	btfsc 0x1c,1
+	goto 0x042
+	bcf status,rp0
+	btfss 0x1c,2
+	goto 0x025
+	decfsz 0x0f,w
+	incf pcl,f
+	bsf status,c
+	clrw
+	btfss status,c
+	movlw 0x02
+	addwf pcl,f
+	bsf 0x05,0
+	goto 0x02c
+	bcf 0x05,0
+	goto 0x02c
+	clrw
+	btfss 0x06,0
+	movlw 0x02
+	addwf pcl,f
+	bsf status,c
+	goto 0x02c
+	bcf status,c
+	decfsz 0x0f,f
+	goto 0x04b
+	btfss 0x1c,2
+	goto 0x033
+	bsf 0x1c,1
+	goto 0x053
+	goto 0x042
+	btfss status,c
+	goto 0x042
+	movlw d'0'
+	subwf 0x1d,w
+	btfss status,z
+	goto 0x042
+	movf 0x10,w
+	movwf 0x14
+	movf 0x11,w
+	movwf 0x15
+	movf 0x12,w
+	movwf 0x16
+	movf 0x13,w
+	movwf 0x17
+	goto 0x042
+	clrf 0x01
+	bcf 0x1c,1
+	bsf status,rp0
+	bsf 0x01,5
+	bcf 0x1c,3
+	btfss 0x1c,2
+	bcf intcon,t0ie
+	bsf intcon,inte
+	goto 0x053
+	rrf 0x10,f
+	rrf 0x11,f
+	rrf 0x12,f
+	rrf 0x13,f
+	btfss 0x1c,2
+	rrf 0x1d,f
+	btfsc 0x1c,2
+	rrf 0x1e,f
+	bcf status,rp0
+	movf status,w
+	movwf 0x0e
+	movf 0x0d,w
+	movwf status
+	movf 0x0c,w
+	bcf intcon,intf
+	bcf intcon,t0if
+	retfie
+SendTx	btfss 0x1c,2
+	return
+	btfsc 0x1c,3
+	return
+	bsf 0x1c,3
+	bcf 0x0e,0
+	movf 0x18,w
+	movwf 0x10
+	movf 0x19,w
+	movwf 0x11
+	movf 0x1a,w
+	movwf 0x12
+	movf 0x1b,w
+	movwf 0x13
+	movlw d'0'
+	movwf 0x1e
+	bcf intcon,gie
+	call 0x004
+	return
+ModeSw	btfsc 0x1c,3
+	return
+	bcf 0x1c,0
+	btfsc 0x1c,2
+	goto 0x07a
+	bsf 0x1c,2
+	bcf status,rp0
+	bsf 0x05,0
+	bsf status,rp0
+	bcf 0x05,0
+	return
+	bcf 0x1c,2
+	bsf intcon,inte
+	return
+	movf status,w
+	movwf 0x0d
+	movwf 0x0e
+	movlw 0x0c
+	movwf fsr
+	clrf indf
+	incf fsr,f
+	movlw 0x4f
+	subwf fsr,w
+	btfss status,z
+	goto 0x082
+	bsf intcon,t0ie
+	bsf status,rp0
+	bcf 0x01,6
+	movlw 0xf0
+	andwf 0x01,f
+	call 0x042
+	goto VxdOrg
+VxdOrg 	nop
+```
+
 C Version (2004):
 In 2004, the microcontroller assembly code was migrated to the Turbo C programming language for desktop computers (MS-DOS), as requested by the **Land Bank of the Philippines**. The transition was made for convenience, being more practical and easier to use than the handheld prototype microcontroller version, which was too bulky and impractical for real use.
 
