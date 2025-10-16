@@ -1,6 +1,10 @@
 # Electronic Cash Demo
 
-**Ecash** is an open-source electronic cash library that allows developers to create an ecash platform for facilitating the secure location and transfer of ecash between benefactors and beneficiaries.
+**Ecash** is an open-source electronic cash library that enables developers to build platforms for securely managing and transferring e-cash between benefactors and beneficiaries. Unlike conventional digital payment systems, this library does not rely on cryptographic signatures, centralized accounts, or blockchain ledgers. Instead, e-cash units exist as spatially referenced constructs within a virtual environment, and their state is maintained through an entropy–chaos algorithm that collapses data into an entropic form when inactive.
+
+Developers can integrate the library to create offline-capable platforms, where e-cash is transferred directly between devices or accounts via optical or QR-based exchanges. Each transfer involves splitting and merging portions of the e-cash structure, ensuring that value cannot be duplicated or double-spent. The original e-cash data cannot be retrieved or reconstructed except through the correct virtual address, and it re-emerges only through the deterministic process of emergence defined by the algorithm.
+
+Designed for simplicity and efficiency, the library draws inspiration from microcontroller-based implementations (such as the PIC16F84 using Assembly language), allowing secure, minimal, and lightweight e-cash operations suitable for off-grid or isolated environments, as well as integration into custom platforms for banks, merchants, or digital wallets.
 
 Go to the [Electronic Cash Tutorials](http://ecash-tutorial.web.app) or download the [Ecash Module](https://github.com/VeinSyct/ECash-Module/tree/main/module-ecash/platform) to start building your own ecash platform.  
 
@@ -9,7 +13,11 @@ Go to the [Electronic Cash Tutorials](http://ecash-tutorial.web.app) or download
 
 ![163618338-pagamento-con-codice-qr-shopping-online-portafoglio-e-concetto-di-tecnologia-senza-contanti-mano](https://github.com/user-attachments/assets/a61d67b6-cbe2-4195-aa54-01bd9e001097)
 
-This is a demo **open-source** electronic cash application that enables the transfer of ecash between mobile and desktop devices. It ensures **data security**, **transaction anonymity**, and prevents fraud such as **double spending** through the use of an *entropy chaos algorithm* for transferring ecash data between devices.
+This is a demo electronic cash application that enables the secure transfer of e-cash between mobile and desktop devices. Each e-cash instance exists as a spatially referenced construct within a virtual environment and is managed by an entropy–chaos algorithm, which collapses inactive data into an unreadable entropic state.
+
+Transfers occur through splitting and merging of e-cash structures via optical or QR-based exchanges, ensuring that once e-cash is merged with a recipient, it no longer exists in the sender’s environment. This mechanism naturally prevents double-spending, maintains transactional integrity, and preserves anonymity, without relying on cryptographic keys, centralized accounts, or blockchain ledgers.
+
+The system’s simplicity originates from its microcontroller-based design (originally implemented on the PIC16F84 using Assembly), making it lightweight, deterministic, and suitable for offline or off-grid environments, while providing a flexible foundation for developers to experiment with custom platforms, wallets, or financial infrastructures.
 
 ---
 
@@ -25,7 +33,7 @@ The **E-Cash** system is a descendant of several early electronic cash prototype
 ### PIC16F84 UART Source Code:
 
 ```ruby
-W_Temp equ 0ch
+    W_Temp equ 0ch
 	SaveB0 equ 14h
 	SaveB1 equ 15h
 	SaveB2 equ 16h
@@ -127,7 +135,7 @@ W_Temp equ 0ch
 	bcf intcon,intf
 	bcf intcon,t0if
 	retfie
-SendTx	btfss 0x1c,2
+SendTx btfss 0x1c,2
 	return
 	btfsc 0x1c,3
 	return
