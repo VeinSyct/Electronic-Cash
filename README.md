@@ -6,9 +6,9 @@
 
 The E-Cash is a descendant of several earlier electronic cash versions, originating from the PICF84MT13 prototype developed in 2003 at AMA Computer College, Cagayan de Oro. This version used the microcontroller PIC16F84, powered by a lithium battery to retain RAM data memory. Its source code was written entirely in Assembly language.
 
-![Uploading picinf84mt13.webp…]()
+<img width="320" height="240" alt="image" src="https://github.com/user-attachments/assets/bb01900a-907d-43bf-9a1c-3628bfd008f1" />
 
-![Uploading f84mt1314case.webp…]()
+<img width="320" height="240" alt="image" src="https://github.com/user-attachments/assets/b0e5073f-db4c-4f6a-a46f-86d42b85c04c" />
 
 C Version (2004):
 In 2004, the microcontroller assembly code was migrated to the Turbo C programming language for desktop computers (MS-DOS), as requested by the Land Bank of the Philippines. The transition was made for convenience, being more practical and easier to use than the handheld prototype microcontroller version, which was too bulky and impractical for real use.
