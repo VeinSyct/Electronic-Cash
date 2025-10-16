@@ -4,7 +4,7 @@
 
 ## Electronic Cash Development History
 
-The E-Cash is a descendant of several earlier electronic cash versions, originating from the PICF84MT13 prototype developed in 2003 at AMA Computer College, Cagayan de Oro. This version used the microcontroller PIC16F84, powered by a lithium battery to retain RAM data memory and transfer electronic cash data via single wire, LED LDR and IR transmitter receiver using UART ASM routines. Its source code was written entirely in Assembly language.
+The **E-Cash** system is a descendant of several early electronic cash prototypes, originating from the **PICF84MT13** prototype developed in 2003 at AMA Computer College, Cagayan de Oro. This prototype utilized a **PIC16F84** microcontroller, powered by a lithium battery to preserve RAM data memory, and transferred electronic cash data through a single-wire interface, as well as LED-LDR and IR transmitter-receiver communication channels using UART assembly routines. Its firmware was written entirely in Assembly language.
 
 ![picinf84mt13](https://github.com/user-attachments/assets/45bd1abf-69a3-4b94-9928-999f9afd32cf)
 
@@ -12,7 +12,7 @@ The E-Cash is a descendant of several earlier electronic cash versions, originat
 
 
 C Version (2004):
-In 2004, the microcontroller assembly code was migrated to the Turbo C programming language for desktop computers (MS-DOS), as requested by the Land Bank of the Philippines. The transition was made for convenience, being more practical and easier to use than the handheld prototype microcontroller version, which was too bulky and impractical for real use.
+In 2004, the microcontroller assembly code was migrated to the Turbo C programming language for desktop computers (MS-DOS), as requested by the **Land Bank of the Philippines**. The transition was made for convenience, being more practical and easier to use than the handheld prototype microcontroller version, which was too bulky and impractical for real use.
 
 Basic Version (2013):
 The system was later translated into Visual Basic and integrated with MySQL for data storage. However, with Microsoft discontinuing support for Visual Basic in 2013, this version quickly became obsolete.
