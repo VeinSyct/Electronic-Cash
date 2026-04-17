@@ -21,6 +21,9 @@ Go to the [Electronic Cash Tutorials](http://ecash-tutorial.web.app) or download
 
 This is a demo electronic cash application that enables the secure transfer of e-cash between mobile and desktop devices. Each e-cash instance exists as a spatially referenced construct within a virtual environment and is managed by an entropy–chaos algorithm, which collapses inactive data into an unreadable entropic state.
 
+
+<img width="1536" height="1024" alt="2d5e8b02-36dd-4acd-bd10-c57c71a8954d" src="https://github.com/user-attachments/assets/045e2b18-70fc-487b-8a2b-31da8f1dafc6" />
+
 Transfers occur through splitting and merging of e-cash structures via optical or QR-based exchanges, ensuring that once e-cash is merged with a recipient, it no longer exists in the sender’s environment. This mechanism naturally prevents double-spending, maintains transactional integrity, and preserves anonymity, without relying on cryptographic keys, centralized accounts, or blockchain ledgers.
 
 The system’s simplicity originates from its microcontroller-based design (originally implemented on the PIC16F84 using Assembly), making it lightweight, deterministic, and suitable for offline or off-grid environments, while providing a flexible foundation for developers to experiment with custom platforms, wallets, or financial infrastructures.
