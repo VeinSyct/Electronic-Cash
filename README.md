@@ -268,6 +268,9 @@ This project does **not** create or mint ecash. It has no capability to generate
 
 The system uses an entropy–chaos algorithm (implemented in this repository) that collapses e-cash data into an entropic state, making it impossible to reconstruct by reversal or brute force.
 
+
+<img width="1536" height="1024" alt="ceb1737c-d78d-40fe-848c-9aa21aa6be6f" src="https://github.com/user-attachments/assets/ce38b473-6e3e-4a99-a788-4f5b4661d88c" />
+
 Data becomes readable again only through emergence — a process where order reappears naturally within the algorithm’s deterministic chaos. This is not restoration or decryption, but a recurrence of structure predicted by the algorithm’s internal timing and sequence logic.
 
 This method allows e-cash to exist as transient, self-validating data that cannot be copied, forged, or meaningfully analyzed outside its active state.
