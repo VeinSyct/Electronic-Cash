@@ -3,7 +3,8 @@
 **Ecash** is an open-source electronic cash library that enables developers to build platforms for securely managing and transferring e-cash between benefactors and beneficiaries. Unlike conventional digital payment systems, this library does not rely on cryptographic signatures, centralized accounts, or blockchain ledgers. Instead, e-cash units exist as spatially referenced constructs within a virtual environment, and their state is maintained through an entropy–chaos algorithm that collapses data into an entropic form when inactive.
 
 
-<img width="1536" height="1024" alt="3ad708ba-99a0-47d0-91ef-d29aba6bae35" src="https://github.com/user-attachments/assets/eb262869-14f8-4483-b5c5-5079bd4bb6ef" />
+<img width="1672" height="941" alt="b781efbd-7886-4af9-abe9-6ea787209313" src="https://github.com/user-attachments/assets/edddd46b-35a6-4542-b982-47b9409d0bda" />
+
 
 Developers can integrate the library to create offline-capable platforms, where e-cash is transferred directly between devices or accounts via optical or QR-based exchanges. Each transfer involves splitting and merging portions of the e-cash structure, ensuring that value cannot be duplicated or double-spent. The original e-cash data cannot be retrieved or reconstructed except through the correct virtual address, and it re-emerges only through the deterministic process of emergence defined by the algorithm.
 
